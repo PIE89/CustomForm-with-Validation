@@ -1,0 +1,25 @@
+.field {
+  margin-bottom: 15px;
+}
+
+.legend {
+  margin-bottom: 0.5rem;
+  padding-left: 24px;
+}
+
+input[name="login"],
+input[name="password"],
+textarea[name="about"] {
+  padding: 10px;
+
+  display: inline-block;
+  width: 100%;
+
+  background-color: #fff;
+  border: 1px solid orange;
+}
+
+input[name="login"],
+input[name="password"] {
+  border-radius: 15px;
+}

@@ -1,0 +1,13 @@
+.submitBtn {
+  padding: 0.5rem;
+  background-color: rgba(71, 71, 71, 0.3);
+  border: 1px solid orange;
+  border-radius: 0.5rem;
+
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.submitBtn:hover {
+  background-color: #000000;
+  color: #fff;
+}

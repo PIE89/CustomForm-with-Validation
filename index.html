@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/form.css" />
+    <link rel="stylesheet" href="./style/radio.css" />
+    <link rel="stylesheet" href="./style/checkbox.css" />
+    <link rel="stylesheet" href="./style/btn.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="post" method="post" novalidate data-js-form>
+        <fieldset class="field">
+          <legend class="legend">Логин</legend>
+          <input
+            type="text"
+            name="login"
+            id="login"
+            autocomplete="login"
+            required
+            minlength="6"
+            maxlength="10"
+            aria-errormessage="login-errors"
+          />
+          <span
+            class="field__errors"
+            id="login-errors"
+            data-js-form-errors
+          ></span>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend class="legend">Пароль</legend>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            autocomplete="current-password"
+            minlength="8"
+            maxlength="16"
+            pattern="^(?=.*[a-z])(?=.*\d).+$"
+            title="Пароль должен содержать хотя бы одну букву в нижнем регистре и хотя бы одну цифру."
+            aria-errormessage="password-errors"
+          />
+          <span
+            class="field__errors"
+            id="password-errors"
+            data-js-form-errors
+          ></span>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend class="legend">О себе</legend>
+          <textarea name="about" id="about" rows="5"></textarea>
+        </fieldset>
+
+        <fieldset class="field-radio">
+          <legend class="legend-radio">Ваш пол</legend>
+
+          <input
+            type="radio"
+            value="Мужской"
+            id="men"
+            name="gender"
+            required
+            aria-errormessage="gender-errors"
+          />
+
+          <label for="men" class="radioLabel">Мужской</label>
+
+          <input
+            type="radio"
+            value="Женский"
+            id="women"
+            name="gender"
+            required
+            aria-errormessage="gender-errors"
+          />
+
+          <label for="women" class="radioLabel">Женский</label>
+
+          <span
+            class="field__errors"
+            id="gender-errors"
+            data-js-form-errors
+          ></span>
+        </fieldset>
+
+        <fieldset class="field-checkbox">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="checkbox"
+            required
+            aria-errormessage="checkbox-errors"
+          />
+          <label for="checkbox" class="checkboxLabel">Согласен на все</label>
+
+          <span
+            class="field__errors"
+            id="checkbox-errors"
+            data-js-form-errors
+          ></span>
+        </fieldset>
+
+        <button type="submit" class="submitBtn" id="submitBtn">
+          Регистрация
+        </button>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+    <!-- <script src="./formData.js"></script> -->
+  </body>
+</html>
